@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Портфолио Беликова Нелли</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- Фоновое изображение на всю ширину и высоту -->
+        <div class="background-image"></div>
+        
+        <!-- Шапка с кнопками -->
+        <header class="header">
+            <nav class="nav">
+                 <a href="index.html" class="nav-link">Главная</a>
+                 <a href="Проекты.html" class="nav-link">Проекты</a>
+            </nav>
+        </header>
+        
+        <!-- Изображение под хэдером -->
+        <div class="hero-image">
+            <img src="img/Group 636.png" alt="Hero Image" class="hero-img">
+        </div>
+        
+        <!-- Две колонки с фото -->
+        <div class="two-columns">
+            <div class="column">
+                <div class="column-content">
+                    <img src="img/Group 582.png" alt="Photo 1" class="column-img">
+                    <div class="column-text">СПбГУПТД - БВО;<br>
+Starikov Production (3D/VFX course);<br>
+HDS(Concept Artist 2D course)</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-content">
+                    <img src="img/Group 583.png" alt="Photo 2" class="column-img">
+                    <div class="column-text">Blender<br>
+Adobe Substance 3D Painter;<br>
+Adobe Photoshop;<br>
+Figma;<br>
+Spline</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gallery-block">
+            <div class="gallery-main">
+                <img src="img/Group 635.png" alt="Main Gallery" class="gallery-main-img">
+                <div class="gallery-thumbnails">
+                    <a href="https://mail.ru/" target="_blank">
+                        <img src="img/Group 642.png" draggable="false" alt="Thumb 1" class="thumbnail">
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="img/Group 604.png" draggable="false" alt="Thumb 2" class="thumbnail">
+                    </a>
+                    <a href="https://web.telegram.org/a/" target="_blank">
+                        <img src="img/Group 605.png" draggable="false" alt="Thumb 3" class="thumbnail">
+                    </a>
+                    <a href="https://github.com/" target="_blank">
+                        <img src="img/Group 606.png" draggable="false" alt="Thumb 4" class="thumbnail">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+<div class="grid-block">
+    <div class="grid-container">
+        <div class="grid-row">
+            <div class="grid-cell">
+                <div class="hover-image">
+                    <img src="img/карточка тел сер.png" alt="Photo 1" class="default-img">
+                    <img src="img/карточка тел прост.png" alt="Photo 1 Hover" class="hover-img">
+                </div>
+            </div>
+            <div class="grid-cell">
+                <div class="hover-image">
+                    <img src="img/бубн карточка сер.png" alt="Photo 2" class="default-img">
+                    <img src="img/бубн карточка прост.png" alt="Photo 2 Hover" class="hover-img">
+                </div>
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="grid-cell">
+                <div class="hover-image">
+                    <img src="img/ведьма карточка сер.png" alt="Photo 3" class="default-img">
+                    <img src="img/ведьма карточка прост.png" alt="Photo 3 Hover" class="hover-img">
+                </div>
+            </div>
+            <div class="grid-cell">
+                <div class="hover-image">
+                    <img src="img/робот карточка сер.png" alt="Photo 4" class="default-img">
+                    <img src="img/робот карточка прост.png" alt="Photo 4 Hover" class="hover-img">
+                </div>
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="grid-cell">
+                <div class="hover-image">
+                    <img src="img/Group 640.png" alt="Photo 5" class="default-img">
+                    <img src="img/Group 641.png" alt="Photo 5 Hover" class="hover-img">
+                </div>
+            </div>
+           <div class="grid-cell">
+                <div class="vertical-split">
+                    <div class="split-image">
+                            <img src="img/Group 637.png" alt="Photo 6" class="default-img">
+                    </div>
+                    <div class="split-button">
+                    <a href="projects.html" class="detail-btn">Проекты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <!-- Глаз -->
+        <div class="eye-container">
+            <div id="canvas-container"></div>
+        </div>
+        
+        <!-- Сосуды -->
+        <div class="vessels-container">
+            <svg class="vessel-svg" viewBox="0 0 800 2238" preserveAspectRatio="xMidYMin meet">
+                <defs>
+                    <linearGradient id="bloodGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#8b3c2c"/>
+                        <stop offset="50%" stop-color="#aa5a4a"/>
+                        <stop offset="100%" stop-color="#6a2e22"/>
+                    </linearGradient>
+                </defs>
+                
+                <!-- ГЛАВНЫЙ СТВОЛ -->
+                <path class="vessel-path" d="M 400 0 
+                                         C 385 80, 415 160, 400 230
+                                         C 385 300, 415 370, 400 440
+                                         C 385 510, 415 580, 400 650
+                                         C 385 720, 415 790, 400 860
+                                         C 385 930, 415 1000, 400 1070
+                                         C 385 1140, 415 1210, 400 1280
+                                         C 385 1350, 415 1420, 400 1490
+                                         C 385 1560, 415 1630, 400 1700
+                                         C 385 1770, 415 1840, 400 1910
+                                         C 385 1980, 415 2050, 400 2120
+                                         C 385 2190, 415 2260, 400 2330"
+                                      stroke="url(#bloodGradient)" stroke-width="6" fill="none"/>
+                
+                <!-- ВЕТВИ -->
+                <path class="vessel-path-secondary" d="M 390 230 L 280 260 L 220 310 L 180 370 L 160 440 L 150 510" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 150 510 L 140 570 L 135 630 L 130 690" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 150 510 L 158 580 L 165 640 L 170 700" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-secondary" d="M 410 440 L 510 470 L 580 520 L 620 590 L 640 670 L 635 750" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 635 750 L 620 810 L 610 870 L 600 930" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 635 750 L 650 810 L 665 860 L 675 910" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-secondary" d="M 390 860 L 290 900 L 220 960 L 180 1030 L 160 1100 L 150 1170" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 150 1170 L 138 1230 L 130 1290 L 125 1350" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-secondary" d="M 410 1280 L 520 1310 L 590 1370 L 630 1440 L 650 1520 L 655 1600" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 655 1600 L 645 1660 L 635 1720 L 628 1780" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-secondary" d="M 390 1700 L 310 1740 L 250 1800 L 215 1870 L 200 1940" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 200 1940 L 185 2000 L 175 2060 L 168 2120" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 200 1940 L 215 1990 L 230 2040 L 240 2090" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-secondary" d="M 410 2120 L 510 2150 L 580 2200 L 620 2270 L 640 2340" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 640 2340 L 625 2400 L 615 2460 L 608 2520" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 380 650 L 320 680 L 280 720 L 260 770" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 420 1070 L 490 1100 L 540 1140 L 570 1190" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 380 1490 L 330 1520 L 295 1560 L 280 1610" stroke="url(#bloodGradient)"/>
+                <path class="vessel-path-capillary" d="M 420 1910 L 480 1940 L 530 1980 L 560 2030" stroke="url(#bloodGradient)"/>
+                
+                <!-- ПУЛЬСИРУЮЩИЕ КАПЛИ -->
+                <circle cx="130" cy="690" r="4" fill="#cc6a5a" opacity="0.9">
+                    <animate attributeName="r" values="4;6;4" dur="1.8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="170" cy="700" r="3.5" fill="#cc6a5a" opacity="0.8">
+                    <animate attributeName="r" values="3.5;5.5;3.5" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="600" cy="930" r="4" fill="#cc6a5a" opacity="0.85">
+                    <animate attributeName="r" values="4;6;4" dur="1.9s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="125" cy="1350" r="3.8" fill="#cc6a5a" opacity="0.85">
+                    <animate attributeName="r" values="3.8;5.8;3.8" dur="2.1s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="628" cy="1780" r="4" fill="#cc6a5a" opacity="0.9">
+                    <animate attributeName="r" values="4;6;4" dur="1.7s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="168" cy="2120" r="3.5" fill="#cc6a5a" opacity="0.8">
+                    <animate attributeName="r" values="3.5;5.5;3.5" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="240" cy="2090" r="3.5" fill="#cc6a5a" opacity="0.8">
+                    <animate attributeName="r" values="3.5;5.5;3.5" dur="2.2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="608" cy="2520" r="4" fill="#cc6a5a" opacity="0.9">
+                    <animate attributeName="r" values="4;6;4" dur="1.8s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        scene.background = null;
+        
+        const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
+        camera.position.set(0, 0, 3.8);
+        camera.lookAt(0, 0, 0);
+        
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        
+        function resizeCanvas() {
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            renderer.setSize(width, height);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+        }
+        
+        container.appendChild(renderer.domElement);
+        resizeCanvas();
+        
+        const ambientLight = new THREE.AmbientLight(0x404060);
+        scene.add(ambientLight);
+        
+        const mainLight = new THREE.DirectionalLight(0xffffff, 1.3);
+        mainLight.position.set(1, 2, 1.5);
+        scene.add(mainLight);
+        
+        const fillLight = new THREE.PointLight(0x88aaff, 0.5);
+        fillLight.position.set(0.5, 0.3, 1.2);
+        scene.add(fillLight);
+        
+        const warmLight = new THREE.PointLight(0xffaa88, 0.4);
+        warmLight.position.set(1.2, 0.2, 0.8);
+        scene.add(warmLight);
+        
+        const eyeGroup = new THREE.Group();
+        scene.add(eyeGroup);
+        
+        const scleraGeometry = new THREE.SphereGeometry(0.88, 96, 96);
+        const scleraMaterial = new THREE.MeshStandardMaterial({
+            color: 0xf5f5fa,
+            roughness: 0.28,
+            metalness: 0.08,
+            emissive: 0x222222,
+            emissiveIntensity: 0.03
+        });
+        const sclera = new THREE.Mesh(scleraGeometry, scleraMaterial);
+        sclera.castShadow = true;
+        eyeGroup.add(sclera);
+        
+        const irisGroup = new THREE.Group();
+        eyeGroup.add(irisGroup);
+        irisGroup.position.set(0, 0, 0.89);
+        
+        const irisGeometry = new THREE.SphereGeometry(0.42, 128, 128);
+        const irisMaterial = new THREE.MeshStandardMaterial({
+            color: 0x4a6e8a,
+            roughness: 0.25,
+            metalness: 0.15,
+            emissive: 0x221100,
+            emissiveIntensity: 0.08
+        });
+        const iris = new THREE.Mesh(irisGeometry, irisMaterial);
+        iris.castShadow = true;
+        irisGroup.add(iris);
+        
+        const pupilGeometry = new THREE.SphereGeometry(0.24, 96, 96);
+        const pupilMaterial = new THREE.MeshStandardMaterial({
+            color: 0x030303,
+            roughness: 0.12,
+            metalness: 0.85,
+            emissive: 0x111111,
+            emissiveIntensity: 0.05
+        });
+        const pupil = new THREE.Mesh(pupilGeometry, pupilMaterial);
+        pupil.position.set(0, 0, 0.23);
+        irisGroup.add(pupil);
+        
+        const highlightGeo = new THREE.SphereGeometry(0.075, 48, 48);
+        const highlightMat = new THREE.MeshStandardMaterial({
+            color: 0xffffff,
+            emissive: 0xaaccff,
+            emissiveIntensity: 0.45,
+            roughness: 0.08,
+            metalness: 0.95
+        });
+        const highlight = new THREE.Mesh(highlightGeo, highlightMat);
+        highlight.position.set(0.13, 0.15, 0.38);
+        irisGroup.add(highlight);
+
+        const glowGeometry = new THREE.SphereGeometry(1, 62, 62);
+        const glowMaterial = new THREE.MeshBasicMaterial({
+            color: 0x3c73ff,
+            transparent: true,
+            opacity: 0.25,
+            side: THREE.BackSide
+        });
+        const glow = new THREE.Mesh(glowGeometry, glowMaterial);
+        eyeGroup.add(glow);
+        
+        const targetRotation = { x: 0, y: 0 };
+        const currentRotation = { x: 0, y: 0 };
+        const MAX_ANGLE_X = 0.48;
+        const MAX_ANGLE_Y = 0.44;
+        
+        window.addEventListener('mousemove', (event) => {
+            const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+            const mouseY = (event.clientY / window.innerHeight) * 2 - 1;
+            targetRotation.y = mouseX * MAX_ANGLE_X;
+            targetRotation.x = mouseY * MAX_ANGLE_Y;
+        });
+        
+        function animateEye() {
+            requestAnimationFrame(animateEye);
+            currentRotation.x += (targetRotation.x - currentRotation.x) * 0.18;
+            currentRotation.y += (targetRotation.y - currentRotation.y) * 0.18;
+            irisGroup.rotation.x = currentRotation.x;
+            irisGroup.rotation.y = currentRotation.y;
+            renderer.render(scene, camera);
+        }
+        
+        animateEye();
+        
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+        });
+        
+        function updateScroll() {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = Math.min(100, Math.max(0, (window.scrollY / scrollHeight) * 100));
+            
+            const paths = document.querySelectorAll('.vessel-path, .vessel-path-secondary, .vessel-path-capillary');
+            const totalPaths = paths.length;
+            const visiblePaths = Math.floor((progress / 100) * totalPaths);
+            
+            paths.forEach((path, idx) => {
+                if (idx <= visiblePaths) {
+                    path.classList.add('vessel-glow');
+                } else {
+                    path.classList.remove('vessel-glow');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', updateScroll);
+        updateScroll();
+    </script>
+</body>
+<!-- Футер -->
+<footer class="footer">
+    <p class="footer-text">© 2026 Все права защищены</p>
+</footer>
+</html>

@@ -1,0 +1,845 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img,
+a,
+div,
+canvas,
+video,
+.thumbnail,
+.project-image img,
+.detail-image,
+.detail-video,
+.hover-image img,
+.gallery-main-img,
+.column-img,
+.hero-img {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: auto;
+}
+
+
+canvas {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.nav-link,
+.footer-text,
+.column-text,
+.detail-btn,
+.detail-btn2,
+.detail-btn-center,
+.back-button {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.page {
+    width: 100%;
+    min-height: 20vh;
+    position: relative;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/основа.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.header {
+    position: relative;
+    top: 56px;
+    margin: 0vw 80vw 0vw 0vw;
+    width: 100%;
+    z-index: 12;
+    pointer-events: none;
+    justify-self: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    pointer-events: auto;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: 0;
+    padding-right: 40px;
+}
+
+.header2 {
+    position: relative;
+    top: 56px;
+    width: 100%;
+    z-index: 12;
+    pointer-events: none;
+}
+
+.nav2 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    pointer-events: auto;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: 0;
+    padding-right: 655px;
+} 
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 4px;
+    white-space: nowrap;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 128px;
+    width: 100%;
+}
+
+.hero-img {
+    max-width: auto;
+    height: 518px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.two-columns {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 500px;
+    margin-top: 40px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.column {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.column-text {
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    font-family: 'Martian Mono', 'Arial', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    width: 17vw;
+}
+
+.column-text::before {
+    content: "•";
+    position: absolute;
+    left: -10%;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.column-content {
+    position: relative;
+    display: inline-block;
+}
+
+.gallery-block {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.gallery-main {
+    position: relative;
+    display: inline-block;
+    max-width: 1329px;
+    width: 100%;
+}
+
+.gallery-main-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-thumbnails {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    z-index: 15;
+}
+
+.thumbnail {
+    width: auto;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 16;
+}
+
+.gallery-thumbnails a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.eye-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 11;
+    margin-top: 0;
+}
+
+#canvas-container {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    margin-top: -1600px;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.vessels-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -1300px;
+    position: relative;
+    z-index: 9;
+}
+
+.vessel-svg {
+    width: 100%;
+    max-width: 510px;
+    max-height: 1400px;
+    height: auto;
+    display: block;
+    margin-bottom: -13%;
+}
+
+.vessel-path {
+    stroke: #5a2116a3;
+    stroke-width: 10;
+    fill: none;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 3px rgba(139, 60, 44, 0.5));
+    transition: filter 0.3s ease;
+}
+
+.vessel-path-secondary {
+    stroke: #6a2e22;
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    opacity: 0.85;
+    transition: filter 0.3s ease;
+}
+
+.vessel-path-capillary {
+    stroke: #aa5a4a;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    opacity: 0.7;
+    transition: filter 0.3s ease;
+}
+
+.vessel-glow {
+    filter: drop-shadow(0 0 8px rgba(200, 80, 60, 0.9)) !important;
+}
+
+/* Новый блок с сеткой 2x3 */
+.grid-block {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1326px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.grid-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.grid-cell {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover-image {
+    position: relative;
+    width: 100%;
+    max-width: 653px;
+    max-height: 265px;
+    aspect-ratio: 1 / 1;
+}
+
+.hover-image {
+    position: relative;
+    width: 100%;
+    max-width: 653px;
+    max-height: 265px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.hover-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0s linear;
+    border-radius: 50px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+.hover-image .default-img {
+    opacity: 1;
+}
+
+.hover-image .hover-img {
+    opacity: 0;
+}
+
+.hover-image:hover .default-img {
+    opacity: 0;
+}
+
+.hover-image:hover .hover-img {
+    opacity: 1;
+}
+
+/* Стили только для 6-й ячейки */
+.vertical-split {
+    width: 100%;
+    max-width: 653px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: -4vw;
+}
+
+.split-image {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    max-width: none;
+}
+
+.split-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-btn {
+    width: 100%;
+    padding: 8px 24px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    font-family: 'Martian Mono', 'Arial', sans-serif;
+    text-align: left;
+}
+
+.grid-btn:hover {
+    background: rgba(0, 166, 255, 0.46);
+    border-color: #00aeff;
+    transform: scale(1.02);
+}
+/* Футер */
+.footer {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: 40px 20px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+
+.page {
+    min-height: auto; /* Убираем min-height, чтобы страница не растягивалась */
+    padding-bottom: 40px;
+}
+
+/* Стили для страницы проектов */
+.projects-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 128px;
+    margin-bottom: 60px;
+    width: 100%;
+    flex: 1;
+}
+
+.projects-list {
+    max-width: 1230px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: auto;
+    cursor: pointer;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0;
+}
+
+.project-default {
+    opacity: 1;
+}
+
+.project-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.project-image:hover .project-default {
+    opacity: 0;
+}
+
+.project-image:hover .project-hover {
+    opacity: 1;
+}
+
+/* Кнопка возврата на главную */
+.back-button-item {
+    margin-top: 24px;
+    max-width: 415px;
+}
+
+.back-button {
+    width: 100%;
+    padding: 8px 24px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    font-family: 'Martian Mono', 'Arial', sans-serif;
+    text-align: left;
+    text-decoration: none;
+}
+
+.back-button:hover {
+   background: rgba(0, 166, 255, 0.46);
+    border-color: #00aeff;
+    transform: scale(1.02);
+}
+
+/* Стили для страницы детального проекта */
+.project-detail-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-detail-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 128px;
+    margin-bottom: 60px;
+    width: 100%;
+    flex: 1;
+}
+
+.project-detail-list {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.detail-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.detail-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+
+/* Блок с двумя кнопками */
+.detail-buttons {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.detail-button-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.detail-btn {
+    width: 100%;
+    padding: 12px 24px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    font-family: 'Martian Mono', 'Arial', sans-serif;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.detail-btn:hover {
+    background: rgba(0, 166, 255, 0.46);
+    border-color: #00aeff;
+    transform: scale(1.02);
+}
+
+.detail-btn2 {
+    width: 100%;
+    padding: 12px 24px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    font-family: 'Martian Mono', 'Arial', sans-serif;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.detail-btn2:hover {
+    background: rgba(0, 166, 255, 0.46);
+    border-color: #00aeff;
+    transform: scale(1.02);
+}
+
+/* Стили для видео на странице детального проекта */
+.detail-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    background: #000;
+}
+
+.video-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Стили для элементов управления видео */
+.detail-video::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.detail-video::-webkit-media-controls-play-button {
+    background-color: rgba(204, 106, 90, 0.8);
+    border-radius: 50%;
+}
+
+.detail-video::-webkit-media-controls-volume-slider {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Три кнопки в ряд */
+.detail-buttons.three-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.detail-buttons.three-buttons .detail-button-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Стиль для центральной кнопки */
+.detail-btn-center {
+    width: 100%;
+    padding: 12px 24px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    font-family: 'Martian Mono', 'Arial', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.detail-btn-center:hover {
+    background: rgba(0, 166, 255, 0.46);
+    border-color: #00aeff;
+    transform: scale(1.02);
+}
+
+/* Стили для видео - изменение цвета кнопок на синий */
+.detail-video::-webkit-media-controls-play-button {
+    background-color: #0088ff !important;
+    border-radius: 50%;
+    
+}
+
+.detail-video::-webkit-media-controls-play-button:hover {
+    background-color: #00aeff !important;
+}
+
+/* Изменение цвета текущего времени и ползунков */
+.detail-video::-webkit-media-controls-current-time-display,
+.detail-video::-webkit-media-controls-time-remaining-display {
+    color: #0088ff !important;
+}
+
+/* Изменение цвета ползунка прогресса */
+.detail-video::-webkit-media-controls-timeline {
+    background-color: rgba(0, 136, 255, 0.3) !important;
+}
+
+.detail-video::-webkit-media-controls-timeline::-webkit-media-controls-timeline-progress {
+    background-color: #0088ff !important;
+}
+
+/* Изменение цвета ползунка громкости */
+.detail-video::-webkit-media-controls-volume-slider {
+    background-color: rgba(0, 136, 255, 0.3) !important;
+}
+
+.detail-video::-webkit-media-controls-volume-slider::-webkit-media-controls-volume-slider-progress {
+    background-color: #0088ff !important;
+}
+
+/* Изменение цвета кнопки громкости */
+.detail-video::-webkit-media-controls-mute-button {
+    background-color: transparent !important;
+}
+
+.detail-video::-webkit-media-controls-mute-button:hover {
+    background-color: rgba(0, 136, 255, 0.2) !important;
+}
+
+/* Изменение цвета кнопки fullscreen */
+.detail-video::-webkit-media-controls-fullscreen-button {
+    background-color: transparent !important;
+}
+
+.detail-video::-webkit-media-controls-fullscreen-button:hover {
+    background-color: rgba(0, 136, 255, 0.2) !important;
+}
+
+/* Основная панель управления */
+.detail-video::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+
+/* Кнопка паузы (когда видео проигрывается) */
+.detail-video::-webkit-media-controls-play-button:active {
+    background-color: #0088ff !important;
+}
+
+/* Иконка паузы внутри кнопки */
+.detail-video::-webkit-media-controls-overlay-play-button {
+    background-color: #0088ff !important;
+    border-radius: 20% !important;
+}
+
+.detail-video::-webkit-media-controls-overlay-play-button:hover {
+    background-color: #00aeff !important;
+}
